@@ -1,17 +1,28 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
 import rollupTypescript from '@rollup/plugin-typescript';
-import pkg from './package.json';
+import dts from 'rollup-plugin-dts';
 
-export default {
-    input: 'src/main.ts',
+export default [{
+    input: 'build/index.js',
     output: {
         file: 'bundle.js',
         format: 'cjs',
         sourceMap: true
     },
     plugins: [
-        nodeResolve(),
-        rollupTypescript()
+        nodeResolve()
+    ],
+    external: [
+        'ramda'
     ]
-  };
+  }, {
+      input: 'build/index.d.ts',
+      output: {
+          file: 'bundle.d.ts',
+          format: 'es'
+      },
+      plugins: [
+          dts()
+      ]
+  }];
   

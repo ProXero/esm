@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "declaration": true,
+        "allowJs": true,
+        "module": "commonjs",
+        "outDir": "test"
+    },
+    "include": ["src"]
+}

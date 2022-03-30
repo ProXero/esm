@@ -1,5 +1,15 @@
 {
     "compilerOptions": {
-        "esModuleInterop": true
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "build",
+//        "strict": true,
+//        "noEmitOnError": true,
+        "esModuleInterop": true,
+        "lib": ["es2017"],
+        "module": "esnext",
+        "declaration": true
     },
+    "include": ["src"],
+    "exclude" : ["src/**/*.test.ts"]
 }
